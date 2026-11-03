@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "riftkingextras",
+  "version": "${version}",
+  "name": "RiftKingExtras",
+  "description": "Skyblock-Inventar im Pixel-Stil mit Banner-Buttons, Equipment-Anzeige und Rarity-Rahmen.",
+  "authors": ["MelonKingDe"],
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["de.melonkingde.riftkingextras.RiftKingExtrasClient"]
+  },
+  "mixins": ["riftkingextras.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.1",
+    "minecraft": "26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
