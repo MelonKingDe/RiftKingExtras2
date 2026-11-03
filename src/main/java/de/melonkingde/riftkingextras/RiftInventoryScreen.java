@@ -38,7 +38,7 @@ public class RiftInventoryScreen extends AbstractContainerScreen<InventoryMenu> 
     private final Btn[] buttons;
 
     public RiftInventoryScreen(LocalPlayer player) {
-        super(player.inventoryMenu, player.getInventory(), Component.literal("RiftKingExtras"), W, H);
+        super(player.inventoryMenu, player.getInventory(), Component.literal("RiftKingInv"), W, H);
 
         List<Slot> slots = this.menu.slots;
         origX = new int[slots.size()];
@@ -110,7 +110,7 @@ public class RiftInventoryScreen extends AbstractContainerScreen<InventoryMenu> 
 
         // Titel: RiftKing (weiss) + Extras (lila)
         Component a = Component.literal("RiftKing").withStyle(s -> s.withColor(0xFFFFFF).withBold(true));
-        Component b = Component.literal("Extras").withStyle(s -> s.withColor(TITLE_PURPLE).withBold(true));
+        Component b = Component.literal("Inv").withStyle(s -> s.withColor(TITLE_PURPLE).withBold(true));
         int wa = this.font.width(a), wb = this.font.width(b);
         int tx = l + (W - wa - wb) / 2;
         g.text(this.font, a, tx, t + 6, 0xFFFFFFFF, true);
