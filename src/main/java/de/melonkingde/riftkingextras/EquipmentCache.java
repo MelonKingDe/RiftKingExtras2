@@ -21,7 +21,7 @@ public final class EquipmentCache {
     private static final int[] MENU_SLOTS = {10, 19, 28, 37};
 
     public static void tick(Minecraft mc) {
-        if (!(mc.screen instanceof AbstractContainerScreen<?> screen)) return;
+        if (!(mc.gui.screen() instanceof AbstractContainerScreen<?> screen)) return;
         if (screen instanceof RiftInventoryScreen) return;
         if (!screen.getTitle().getString().contains("Equipment")) return;
 

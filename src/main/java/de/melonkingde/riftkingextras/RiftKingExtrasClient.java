@@ -15,7 +15,7 @@ public class RiftKingExtrasClient implements ClientModInitializer {
         if (mc.player == null) return;
 
         // Normales Inventar (E) immer durch unseres ersetzen
-        if (mc.screen instanceof InventoryScreen) {
+        if (mc.gui.screen() instanceof InventoryScreen) {
             mc.gui.setScreen(new RiftInventoryScreen(mc.player));
         }
 
