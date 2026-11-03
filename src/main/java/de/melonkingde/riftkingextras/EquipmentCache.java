@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.inventory.Slot;
+import de.melonkingde.riftkingextras.mixin.AbstractContainerScreenAccessor;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public final class EquipmentCache {
         if (screen instanceof RiftInventoryScreen) return;
         if (!screen.getTitle().getString().contains("Equipment")) return;
 
-        List<Slot> slots = screen.getMenu().slots;
+        List<Slot> slots = ((AbstractContainerScreenAccessor) screen).riftkingextras$getMenu().slots;
         if (slots.size() <= MENU_SLOTS[MENU_SLOTS.length - 1]) return;
 
         // Erst auslesen, wenn der Server die Items geschickt hat

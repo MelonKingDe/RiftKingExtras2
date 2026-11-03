@@ -38,9 +38,7 @@ public class RiftInventoryScreen extends AbstractContainerScreen<InventoryMenu> 
     private final Btn[] buttons;
 
     public RiftInventoryScreen(LocalPlayer player) {
-        super(player.inventoryMenu, player.getInventory(), Component.literal("RiftKingExtras"));
-        this.imageWidth = W;
-        this.imageHeight = H;
+        super(player.inventoryMenu, player.getInventory(), Component.literal("RiftKingExtras"), W, H);
 
         List<Slot> slots = this.menu.slots;
         origX = new int[slots.size()];

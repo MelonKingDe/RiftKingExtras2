@@ -16,7 +16,7 @@ public class RiftKingExtrasClient implements ClientModInitializer {
 
         // Normales Inventar (E) immer durch unseres ersetzen
         if (mc.screen instanceof InventoryScreen) {
-            mc.setScreenAndShow(new RiftInventoryScreen(mc.player));
+            mc.gui.setScreen(new RiftInventoryScreen(mc.player));
         }
 
         // Equipment aus dem /stats-Menue mitlesen
